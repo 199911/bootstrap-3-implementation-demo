@@ -28,7 +28,22 @@
         <h1>Bootstrap 3 Implementation playground</h1>
       </div>
     </div>
+
     <div class="container">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#component-with-accessories" aria-controls="component-with-accessories" role="tab" data-toggle="tab">Component with accessories</a></li>
+        <!--
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+         -->
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="component-with-accessories">
+
       <h2>Component with accessories</h2>
       <p>
         Dismissible alert component is an container with a close button on top right hand corner.
@@ -230,6 +245,15 @@
           </ol>
         </div>
       </div>
+
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="profile">
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="messages">
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="settings">
+        </div>
+      </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -238,8 +262,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
   <style media="screen">
-    .container + .container {
-      padding-top: 20px;
+    .container {
+      margin-bottom: 100px;
     }
   </style>
 </html>
