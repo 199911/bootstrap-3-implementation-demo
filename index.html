@@ -44,25 +44,25 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane fade in active" id="component-with-accessories">
 
-      <h2>Component with accessories</h2>
-      <p>
-        Dismissible alert component is an container with a close button on top right hand corner.
-      </p>
-      <p>
-        Let's see it's style, and understand how and why it is implemented in this way.
-      </p>
+          <h2>Component with accessories</h2>
+          <p>
+            Dismissible alert component is an container with a close button on top right hand corner.
+          </p>
+          <p>
+            Let's see it's style, and understand how and why it is implemented in this way.
+          </p>
 
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="alert alert-warning alert-dismissible">
-            <button class="close" style="top: 0px">
-              <span>&times;</span>
-            </button>
-            I am a dismissible alert component.
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <pre>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="alert alert-warning alert-dismissible">
+                <button class="close" style="top: 0px">
+                  <span>&times;</span>
+                </button>
+                I am a dismissible alert component.
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <pre>
   .alert-dismissible {
     padding-right: 35px;
   }
@@ -74,65 +74,65 @@
   .close {
     float: right;
   }</pre>
+              </div>
           </div>
-      </div>
 
-      <h3>Let's start</h3>
-      <p>A container with basic padding and close button</p>
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="alert alert-warning">
-            I am some content: 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
-            <button class="close" style="top: 0px">
-              <span>&times;</span>
-            </button>
+          <h3>Let's start</h3>
+          <p>A container with basic padding and close button</p>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="alert alert-warning">
+                I am some content: 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
+                <button class="close" style="top: 0px">
+                  <span>&times;</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+            </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-        </div>
-      </div>
 
-      <h3>We need to fix the close button top right hand corner</h3>
-      <p>
-        We can use <code>position: absolute;</code> with <code>top</code> and <code>right</code>.
-      </p>
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="alert alert-warning">
-            I am some content: 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
-            <button class="close" style="position: absolute; top: 0; right: 0;">
-              <span>&times;</span>
-            </button>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <pre>
+          <h3>We need to fix the close button top right hand corner</h3>
+          <p>
+            We can use <code>position: absolute;</code> with <code>top</code> and <code>right</code>.
+          </p>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="alert alert-warning">
+                I am some content: 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
+                <button class="close" style="position: absolute; top: 0; right: 0;">
+                  <span>&times;</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <pre>
   .close {
     position: absolute;
     top: 0;
     right: 0;
   }</pre>
-        </div>
-      </div>
-
-      <div class="row">
-        <p class="col-md-8">
-          The close button is outside the alert component, because the position is
-          calculated base to the <code>.col-*-*</code> which have padding. Adding
-          <code>position: relative;</code> to <code>.alert</code>
-        </p>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="alert alert-warning" style="position: relative;">
-            <button class="close" style="position: absolute; top: 0; right: 0;">
-              <span>&times;</span>
-            </button>
-            I am some content: 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
+            </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <pre>
+
+          <div class="row">
+            <p class="col-md-8">
+              The close button is outside the alert component, because the position is
+              calculated base to the <code>.col-*-*</code> which have padding. Adding
+              <code>position: relative;</code> to <code>.alert</code>
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="alert alert-warning" style="position: relative;">
+                <button class="close" style="position: absolute; top: 0; right: 0;">
+                  <span>&times;</span>
+                </button>
+                I am some content: 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <pre>
   .close {
     position: absolute;
     top: 0;
@@ -141,54 +141,54 @@
   .alert {
     position: relative;
   }</pre>
-        </div>
-      </div>
-      <div class="row">
-        <p class="col-md-8">
-          It works, and it is one of the solution, but it is not the best when
-          we need some padding on close button. We need to hardcode the padding
-          to <code>top</code> and <code>right</code>.
-        </p>
-        <p class="col-md-8">
-          Bootstrap 3 implement another solution. It use <code>float: right;</code>
-        </p>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="alert alert-warning">
-            <button class="close" style="float: right;">
-              <span>&times;</span>
-            </button>
-            I am some content: 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
+            </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <pre>
+          <div class="row">
+            <p class="col-md-8">
+              It works, and it is one of the solution, but it is not the best when
+              we need some padding on close button. We need to hardcode the padding
+              to <code>top</code> and <code>right</code>.
+            </p>
+            <p class="col-md-8">
+              Bootstrap 3 implement another solution. It use <code>float: right;</code>
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="alert alert-warning">
+                <button class="close" style="float: right;">
+                  <span>&times;</span>
+                </button>
+                I am some content: 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <pre>
   .close {
     float: right;
   }</pre>
-        </div>
-      </div>
-
-      <div class="row">
-        <p class="col-md-8">
-          But the close button affect the position content inside. So Bootstrap
-          3 add extra padding to the container and use position to
-        </p>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="alert alert-warning" style="padding-right: 35px;">
-            <button class="close" style="float: right; position: relative; right: -22px">
-              <span>&times;</span>
-            </button>
-            I am some content: 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
+            </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <pre>
+
+          <div class="row">
+            <p class="col-md-8">
+              But the close button affect the position content inside. So Bootstrap
+              3 add extra padding to the container and use position to
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="alert alert-warning" style="padding-right: 35px;">
+                <button class="close" style="float: right; position: relative; right: -22px">
+                  <span>&times;</span>
+                </button>
+                I am some content: 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <pre>
   .alert {
     padding-right: 35px;
   }
@@ -197,54 +197,54 @@
     position: relative;
     right: -22px
   }</pre>
-        </div>
-      </div>
-      <div class="row">
-        <p class="col-md-8">
-          I like this implementation, as the close button is part of the
-          component. The style merge the button into the component. Although we
-          have <code>-22px</code>, but it is not parameter of <code>.alert</code>.
-          It is related to size of close button.
-        </p>
-      </div>
-
-      <div class="row">
-        <p class="col-md-8">
-          One of the limitation is, the button must be the first child element of
-          <code>.alert</code>. Otherwise, it will become:
-        </p>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="alert alert-warning" style="padding-right: 35px;">
-            I am some content: 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
-            <button class="close" style="float: right; position: relative; right: -22px">
-              <span>&times;</span>
-            </button>
+            </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <p>
-            It is because the position depends on the default
-            position.
-          </p>
-        </div>
-      </div>
-      <h3>Sum Up</h3>
-      <div class="row">
-        <div class="col-md-8">
-          <ol>
-            <li>
-              We can move the accessory element into padding of the component container.
-            </li>
-            <li>
-              Use <code>position: relative;</code> in component container. It can
-              prevent the children element go outside the component with <code>
-              position: absolute;</code>
-            </li>
-          </ol>
-        </div>
-      </div>
+          <div class="row">
+            <p class="col-md-8">
+              I like this implementation, as the close button is part of the
+              component. The style merge the button into the component. Although we
+              have <code>-22px</code>, but it is not parameter of <code>.alert</code>.
+              It is related to size of close button.
+            </p>
+          </div>
+
+          <div class="row">
+            <p class="col-md-8">
+              One of the limitation is, the button must be the first child element of
+              <code>.alert</code>. Otherwise, it will become:
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="alert alert-warning" style="padding-right: 35px;">
+                I am some content: 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
+                <button class="close" style="float: right; position: relative; right: -22px">
+                  <span>&times;</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <p>
+                It is because the position depends on the default
+                position.
+              </p>
+            </div>
+          </div>
+          <h3>Sum Up</h3>
+          <div class="row">
+            <div class="col-md-8">
+              <ol>
+                <li>
+                  We can move the accessory element into padding of the component container.
+                </li>
+                <li>
+                  Use <code>position: relative;</code> in component container. It can
+                  prevent the children element go outside the component with <code>
+                  position: absolute;</code>
+                </li>
+              </ol>
+            </div>
+          </div>
 
         </div>
         <div role="tabpanel" class="tab-pane fade" id="profile">
