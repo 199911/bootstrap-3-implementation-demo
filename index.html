@@ -56,8 +56,8 @@
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="modal" style="position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: 1; display: block;">
-                <div class="modal-dialog" style="max-width: 340px">
-                  <div class="modal-content">
+                <div class="modal-dialog" style="max-width: 100% !important;">
+                  <div class="modal-content" style="max-width: 100% !important;">
                     <div class="modal-header">
                       <button type="button" class="close"><span>&times;</span></button>
                       <h4 class="modal-title">Modal title</h4>
@@ -75,9 +75,139 @@
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4">
               <pre>
-</pre>
-              </div>
+  .modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .modal-body {
+    position: relative;
+    padding: 15px;
+  }
+  .modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+  }</pre>
+            </div>
           </div>
+          <div class="row">
+            <p class="col-md-8">
+              Everything looks good, but there is a question. Is
+              <code>position: relative;</code> redundant? Let's try to remove it.
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="modal" style="position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: 1; display: block;">
+                <div class="modal-dialog" style="max-width: 100% !important;">
+                  <div class="modal-content" style="max-width: 100% !important;">
+                    <div class="modal-header">
+                      <button type="button" class="close"><span>&times;</span></button>
+                      <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div style="padding: 15px;">
+                      <p>One fine body&hellip;</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <pre>
+  .modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  }
+  .modal-body {
+  padding: 15px;
+  }
+  .modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+  }</pre>
+            </div>
+          </div>
+          <div class="row">
+            <p class="col-md-8">
+              Seems no different. Let's try to add the following style to
+              <code>p</code> inside the <code>.modal-body</code>. And
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <pre>
+  .modal-body p {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }</pre>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="modal" style="position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: 1; display: block;">
+                <div class="modal-dialog" style="max-width: 100% !important;">
+                  <div class="modal-content" style="max-width: 100% !important;">
+                    <div class="modal-header">
+                      <button type="button" class="close"><span>&times;</span></button>
+                      <h4 class="modal-title">With <code>display: relative;</code></h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>One fine body&hellip;</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="modal" style="position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: 1; display: block;">
+                <div class="modal-dialog" style="max-width: 100% !important;">
+                  <div class="modal-content" style="max-width: 100% !important;">
+                    <div class="modal-header">
+                      <button type="button" class="close"><span>&times;</span></button>
+                      <h4 class="modal-title">Without <code>display: relative;</code></h4>
+                    </div>
+                    <div style="padding: 15px;">
+                      <p style="position: absolute; top: 0; left: 0;">One fine body&hellip;</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+            </div>
+          </div>
+
+          <div class="row">
+            <p class="col-md-8">
+              The <code>p</code> inside modal without <code>display: relative;
+              </code> broken. According to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#Absolute_positioning">MDN</a>,
+              <code>position: absolute;</code> element is positioned related to the nearest non-static ancestor.
+            </p>
+          </div>
+
+          <h3>Sum Up</h3>
+          <div class="row">
+            <p class="col-md-8">
+              If the content of components should be limited in the component,
+              we can add <code>position: relative;</code> to the component
+              container.
+            </p>
+          </div>
+
         </div>
 
         <div role="tabpanel" class="tab-pane fade" id="component-with-accessories">
